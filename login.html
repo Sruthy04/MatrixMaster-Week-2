@@ -1,0 +1,32 @@
+<!-- Build an interactive form in HTML (e.g., a simple login form) with input fields for username and password. Write JavaScript to validate the form when submitted. Display a message based on whether the login was successful or not. -->
+
+<!DOCTYPE html>
+   <html>
+   <head>
+       <title>Login Form Example</title>
+   </head>
+   <body>
+       <form id="loginForm">
+           <label for="username">Username:</label>
+           <input type="text" id="username" name="username" required><br><br>
+           <label for="password">Password:</label>
+           <input type="password" id="password" name="password" required><br><br>
+           <button type="submit">Login</button>
+           <p id="message"></p>
+       </form>
+       <script>
+           const loginForm = document.getElementById('loginForm');
+           const message = document.getElementById('message');
+           loginForm.addEventListener('submit', function(event) {
+               event.preventDefault();
+               const username = loginForm.elements['username'].value;
+               const password = loginForm.elements['password'].value;
+               if (username === 'user' && password === 'pass') {
+                   message.textContent = 'Login successful!';
+               } else {
+                   message.textContent = 'Login failed. Please try again.';
+               }
+           });
+       </script>
+   </body>
+   </html>

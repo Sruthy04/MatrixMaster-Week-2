@@ -1,0 +1,28 @@
+<!-- 1. Use the `window.alert` method to display an alert dialog with a message of your choice when a button is clicked on a webpage. -->
+<!-- 2. Create a function that uses `window.prompt` to ask the user for their name, then use `window.alert` to greet them with their name. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Window object examples</title>
+  </head>
+
+  <body>
+    <button id="alertButton">Click Me</button>
+    <script>
+      const alertButton = document.getElementById("alertButton");
+      alertButton.addEventListener("click", function () {
+        window.alert("Hello! This is Sruthy!!!");
+      });
+
+      function greetUser() {
+        let userName = window.prompt("Please enter your name:");
+        if (userName) {
+          window.alert("Hello, " + userName + "! Welcome!");
+        } else {
+          window.alert("Hello! Welcome!");
+        }
+      }
+      greetUser();
+    </script>
+  </body>
+</html>

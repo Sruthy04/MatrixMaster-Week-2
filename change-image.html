@@ -1,0 +1,19 @@
+<!-- Create a web page with an image and a button. Write JavaScript to change the image source when the button is clicked.  -->
+
+<!DOCTYPE html>
+   <html>
+   <head>
+       <title>Image Change Example</title>
+   </head>
+   <body>
+       <img id="image" src="Joe.jpeg" alt="Image 1">
+       <button id="changeImageButton">Change Image</button>
+       <script>
+           const changeImageButton = document.getElementById('changeImageButton');
+           const image = document.getElementById('image');
+           changeImageButton.addEventListener('click', function() {
+               image.src = 'Trump.jpeg';
+           });
+       </script>
+   </body>
+   </html>

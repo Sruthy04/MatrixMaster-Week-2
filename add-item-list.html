@@ -1,0 +1,24 @@
+<!-- In an HTML page, create a list of items (e.g., a to-do list) using an unordered list (`<ul>`) and list items (`<li>`). Write JavaScript to add a new item to the list when a button is clicked. -->
+
+ <!DOCTYPE html>
+   <html>
+   <head>
+       <title>To-Do List Example</title>
+   </head>
+   <body>
+       <ul id="todoList">
+           <li>Task 1</li>
+           <li>Task 2</li>
+       </ul>
+       <button id="addTaskButton">Add Task</button>
+       <script>
+           const addTaskButton = document.getElementById('addTaskButton');
+           const todoList = document.getElementById('todoList');
+           addTaskButton.addEventListener('click', function() {
+               const newTask = document.createElement('li');
+               newTask.textContent = 'Task 3';
+               todoList.appendChild(newTask);
+           });
+       </script>
+   </body>
+   </html>
